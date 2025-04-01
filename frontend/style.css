@@ -40,7 +40,7 @@ body {
   }
 
   .top-bar {
-    display: flex;
+    display: flex;  
     align-items: center;
     overflow: hidden;
     background: rgb(28 40 75);
