@@ -6,6 +6,14 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(28 40 75);
+  color: white;
+}
+
 h1 {
   font-size: 50px;
   line-height: 64px;
@@ -18,7 +26,7 @@ h2 {
   margin: 0;
   text-transform: unset;
   margin: 30px auto;
-  width:70%;
+  width: 70%;
 }
 
 h4 {
@@ -33,13 +41,6 @@ h6 {
 
 .section-p1 {
   padding: 40px 80px;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: rgb(28 40 75);
-  color: white;
 }
 
 /* Elon */
@@ -68,7 +69,6 @@ body {
 .announcement-bar .next {
   right: 20px;
 }
-
 
 .navbar {
   display: flex;
@@ -104,7 +104,6 @@ body {
   gap: 15px;
   font-size: 20px;
 }
-
 
 /* pastgi qism  */
 
@@ -179,9 +178,6 @@ body {
 .tab-toggle {
   display: none;
 }
-
-
-
 
 /* footer */
 .inner-column {
@@ -297,20 +293,18 @@ body {
   }
 }
 
-
-
 /* swiper */
-.slide{
+.slide {
   overflow: hidden;
 }
 .gallery-slide {
-    display: block;
-    width: 80%;
-    height: 630px;
-    padding: 0;
-    border-radius: 12px;
-    overflow: hidden;
-    filter: blur(4px);
+  display: block;
+  width: 80%;
+  height: 630px;
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  filter: blur(4px);
 }
 .gallery-slide img {
   width: 100%;
@@ -320,16 +314,13 @@ body {
 .gallery-slide.swiper-slide-active {
   filter: none;
 }
-.swiper-actions {
-  margin-top: 20px;
-}
-.swiper-actions {
+.gallery-slider.swiper-actions {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
-.gallery-slider{
+.gallery-slider {
   width: 100%;
   overflow: visible;
 }
@@ -339,15 +330,20 @@ body {
   margin: 0;
 }
 .gallery-slider .swiper-btn:after {
-    font-size: 22px;
-    color: #fff;
+  font-size: 22px;
+  color: #fff;
 }
 .gallery-slider .swiper-pagination {
-    position: static;
+  position: static;
     width: fit-content;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    /* position: absolute; */
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
 }
 .gallery-slider .swiper-pagination-bullet {
   width: 14px;
@@ -359,47 +355,43 @@ body {
   background-color: #fff;
 }
 
-
-
 /* category */
-.acc-wraper{
+.acc-wraper {
   margin-left: 120px;
-  width:70%;
+  width: 70%;
 }
 
-.accordion{
-  display:flex;
+.accordion {
+  display: flex;
   flex-flow: row;
-  flex-wrap:nowrap;
-  overflow:hidden;
+  flex-wrap: nowrap;
+  overflow: hidden;
   width: 120%;
-  height:800px
+  height: 800px;
 }
 
-.accordion > div{
+.accordion > div {
   /* width:100%; */
   height: 700px;
-  flex-grow:1;
-  flex-shrink:1;
-/*   min-heihgt: 40px; */
-  overflow:hidden;
-  transition:all .5s ease;
-  position:relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  /*   min-heihgt: 40px; */
+  overflow: hidden;
+  transition: all 0.5s ease;
+  position: relative;
   border-radius: 5px;
 }
 
-.accordion > div:hover{
-  flex-shrink:0
+.accordion > div:hover {
+  flex-shrink: 0;
 }
 
-.accordion div img{
+.accordion div img {
   width: 400px;
   /* width: 99%; */
-  height:100%;
+  height: 100%;
   object-fit: cover;
 }
-
-
 
 /* svejiylaridan */
 .swiper {
@@ -407,7 +399,7 @@ body {
   height: 100%;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide {
+.fresh .swiper-wrapper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -425,7 +417,6 @@ body {
   border-radius: 12px;
 }
 
-
 .actions {
   display: flex;
   align-items: center;
@@ -433,11 +424,11 @@ body {
   gap: 60px;
 }
 
- .mySwiper .swiper-pagination {
+.mySwiper .swiper-pagination {
   width: 100%;
   height: 2.5%;
   text-align: center;
-} 
+}
 
 .mySwiper .swiper-btn {
   cursor: pointer;
@@ -453,6 +444,6 @@ body {
   margin: 0;
 }
 .mySwiper .swiper-btn:after {
-    font-size: 22px;
-    color: #fff;
+  font-size: 22px;
+  color: #fff;
 }

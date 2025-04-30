@@ -8,8 +8,8 @@ let gallerySlider = new Swiper('.gallery-slider', {
      nextEl: '.swiper-button-next',
      prevEl: '.swiper-button-prev',
   },
-  effect: 'coverflow',
   loop: true,
+  effect: 'coverflow',
   centeredSlides: true,
   slidesPerView: 3,
   coverflowEffect: {
@@ -23,7 +23,7 @@ let gallerySlider = new Swiper('.gallery-slider', {
 
 
 // slider
-let swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".fresh", {
 slidesPerView: 1,
 spaceBetween: 10,
   pagination: {
@@ -56,42 +56,8 @@ breakpoints: {
 
 
 
-// Elon
-// const announcements = [
-//   "Ozbeni bilgan biladi, bilmagan o'zi biladi!",
-//   "Yangi chegirmalar uchun kuzatib boring!",
-//   "Biz bilan bog'laning va yangiliklardan xabardor bo'ling!",
-//   "OZBE 3 YOSHDA!",
-//   "qadamlariga hasanot!",
-//   "bizayam drop qvordik"
-// ];
-
-// const announcementText = document.querySelector('.announcement-bar p');
-// const announcementPrev = document.querySelector('.announcement-bar .prev');
-// const announcementNext = document.querySelector('.announcement-bar .next');
-// let announcementIndex = 0;
-
-// function updateAnnouncement() {
-//   announcementText.textContent = announcements[announcementIndex];
-// }
-
-// announcementPrev?.addEventListener('click', () => {
-//   announcementIndex = (announcementIndex - 1 + announcements.length) % announcements.length;
-//   updateAnnouncement();
-// });
-
-// announcementNext?.addEventListener('click', () => {
-//   announcementIndex = (announcementIndex + 1) % announcements.length;
-//   updateAnnouncement();
-// });
-
-// setInterval(() => {
-//   announcementIndex = (announcementIndex + 1) % announcements.length;
-//   updateAnnouncement();
-// }, 1500);
-
 document.addEventListener('DOMContentLoaded', () => {
-// Your code here
+
 const announcements = [
   "Ozbeni bilgan biladi, bilmagan o'zi biladi!",
   "Yangi chegirmalar uchun kuzatib boring!",
@@ -129,5 +95,4 @@ setInterval(() => {
   updateAnnouncement();
 }, 1500);
 });
-// console.log(announcementText); // Check if it logs null or the actual element
 
