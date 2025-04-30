@@ -80,9 +80,16 @@
             <img src="images/7.jpg" alt="">
           </div>
         </div>
-        <div class="swiper-actions">
+        <div class="swiper-actions" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
           <div class="swiper-btn swiper-button-prev"></div>
-          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper-pagination" style="position: static;
+          width: fit-content;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10"></div>
           <div class="swiper-btn swiper-button-next"></div>
         </div>
       </div>
@@ -123,7 +130,7 @@
     <h2>Svejiylaridan</h2>
     <div class="swiper mySwiper fresh">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide" style="border-radius: 20%;">
           <img src="images/1.jpg" alt=""> 
         </div>
         <div class="swiper-slide">

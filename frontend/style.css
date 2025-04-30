@@ -314,18 +314,18 @@ h6 {
 .gallery-slide.swiper-slide-active {
   filter: none;
 }
-.gallery-slide .swiper-actions {
-  margin-top: 20px;
+.gallery-slider.swiper-actions {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 .gallery-slider {
   width: 100%;
   overflow: visible;
 }
 .gallery-slider .swiper-btn {
+  position: static;
   height: 22px;
   margin: 0;
 }
@@ -334,10 +334,16 @@ h6 {
   color: #fff;
 }
 .gallery-slider .swiper-pagination {
-  width: fit-content;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  position: static;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* position: absolute; */
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
 }
 .gallery-slider .swiper-pagination-bullet {
   width: 14px;
@@ -393,13 +399,14 @@ h6 {
   height: 100%;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide {
+.fresh .swiper-wrapper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
 
 .swiper-slide img {
