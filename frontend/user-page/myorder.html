@@ -68,61 +68,131 @@
     <img src="../images/39.jpg" alt="Special Card">
     <h2>Special Card</h2>
     <p>AU$10.00</p>
+    <button class="wishlist-btn"
+          data-id="1"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
+  
   <a href="../details.html" class="product-card">
     <img src="../images/28.jpg" alt="Special Card">
     <h2>Special Card</h2>
     <p>AU$10.00</p>
+    <button class="wishlist-btn"
+          data-id="2"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
+
   <a href="../details.html" class="product-card">
     <img src="../images/48.jpg" alt="Quote Card">
-    <h2>Quote Card</h2>
+    <h2>Quote Card f</h2>
     <p>AU$20.00</p>
+    <button class="wishlist-btn"
+          data-id="3"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
+
   <a href="../details.html" class="product-card">
     <img src="../images/1.jpg" alt="Business Card Design">
     <h2>Business Card Design</h2>
     <p>AU$30.00</p>
+    <button class="wishlist-btn"
+          data-id="4"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
+
   <a href="../details.html" class="product-card">
     <img src="../images/28.jpg" alt="Special Card">
     <h2>Special Card</h2>
     <p>AU$10.00</p>
+    <button class="wishlist-btn"
+          data-id="5"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
+
   <a href="../details.html" class="product-card">
     <img src="../images/48.jpg" alt="Quote Card">
     <h2>Quote Card</h2>
     <p>AU$20.00</p>
+    <button class="wishlist-btn"
+          data-id="6"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
+
   <a href="../details.html" class="product-card">
     <img src="../images/1.jpg" alt="Business Card Design">
     <h2>Business Card Design</h2>
     <p>AU$30.00</p>
+    <button class="wishlist-btn"
+          data-id="7"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
+
   <a href="../details.html" class="product-card">
     <img src="../images/28.jpg" alt="Special Card">
     <h2>Special Card</h2>
     <p>AU$10.00</p>
+    <button class="wishlist-btn"
+          data-id="8"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
+
   <a href="../details.html" class="product-card">
     <img src="../images/48.jpg" alt="Quote Card">
     <h2>Quote Card</h2>
     <p>AU$20.00</p>
+    <button class="wishlist-btn"
+          data-id="9"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
+
   <a href="../details.html" class="product-card">
     <img src="../images/1.jpg" alt="Business Card Design">
     <h2>Business Card Design</h2>
     <p>AU$30.00</p>
+    <button class="wishlist-btn"
+          data-id="10"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
+
   <a href="../details.html" class="product-card">
     <img src="../images/28.jpg" alt="Special Card">
     <h2>Special Card</h2>
     <p>AU$10.00</p>
+    <button class="wishlist-btn"
+          data-id="11"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
   <a href="../details.html" class="product-card">
     <img src="../images/48.jpg" alt="Quote Card">
     <h2>Quote Card</h2>
     <p>AU$20.00</p>
+    <button class="wishlist-btn"
+          data-id="12"
+          data-name="Special Card"
+          data-price="10.00"
+          data-image="../images/39.jpg">❤️</button>
   </a>
 </div>
   <div class="p-actions">
@@ -134,11 +204,40 @@
 </div>
 
 </div>
+</body>
+
+<script>
+  document.querySelectorAll(".wishlist-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const item = {
+        id: btn.dataset.id,
+        name: btn.dataset.name,
+        price: btn.dataset.price,
+        image: btn.dataset.image
+      };
+
+      let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+      // Duplicate tekshiruvi
+      const exists = wishlist.find(i => i.id === item.id);
+      if (!exists) {
+        wishlist.push(item);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        alert("Mahsulot Wishlist'ga qo‘shildi!");
+      } else {
+        alert("Bu mahsulot allaqachon Wishlist'da mavjud.");
+      }
+    });
+  });
+</script>
+
+
+
 
 <script src="./profil.js"></script>
 <script src="../script.js"></script>
+<!-- <script src="./myorder.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-</body>
 </html>
