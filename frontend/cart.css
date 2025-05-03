@@ -198,7 +198,7 @@ img {
 }
 
 .summary .meta-data {
-  border-right: 1px solid #eee;
+  /* border-right: 1px solid #eee; */
   padding-right: 10%;
 }
 
@@ -255,9 +255,10 @@ img {
   border-radius: 10px;
   box-shadow: 0 0 5px #00000030;
   background-color: rgb(37, 53, 100);
-  padding: 0px 30px 30px 30px;
+  padding: 40px 30px 30px 30px;
   margin-bottom: 20px;
   color: #fff; 
+  text-align: center;
 }
 
 h3 {

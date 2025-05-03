@@ -17,46 +17,43 @@
   <link rel="stylesheet" href="./profil.css" />
 </head>
 <body>
-    <header >
-        <div class="announcement-bar">
-          <button class="prev">&#10094;</button>
-          <p>OZBE HUSH KELIBSIZ!</p>
-          <button class="next">&#10095;</button>
-        </div>
-        
-        <nav class="navbar">
-          <a href="../index.html" class="logo"><img src="../images/logo.png" class="logo" alt="" /></a>
-          <ul class="nav-links">
-            <li><a href="../index.html">Главное</a></li>
-            <li><a href="../shop.html">Магазин</a></li>
-            <li><a href="../contact.html">Контакты</a></li>
-          </ul>
-          <div class="icons">
-            <a href="../search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="../login.html"><i class="fa-regular fa-user"></i></a>
-            <a href="../cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
-        </nav>
-      </header>
+
+  <header >
+    <div class="announcement-bar">
+      <button class="prev">&#10094;</button>
+      <p>OZBE HUSH KELIBSIZ!</p>
+      <button class="next">&#10095;</button>
+    </div>
+    
+    <nav class="navbar">
+      <ul class="nav-links nav nav-underline">
+        <a href="../index.html" class="logo"><img src="../images/logo.png" class="logo" alt="" /></a>
+        <li class="nav-item"><a class="nav-link active" href="../index.html">Asosiy</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../shop.html">Do'kon</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../contact.html">Aloqa</a></li>
+      </ul>
+      <div class="icons">
+        <a href="../search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="../login.html"><i class="fa-regular fa-user"></i></a>
+        <a href="../cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+      </div>
+    </nav>
+  </header>
     
     <div class="wrapper">
     <!-- Sidebar -->
     <aside class="sidebar">
       <nav class="menu">
-        <a href="./profil.html" class="active">🧑 My Accounts</a>
-        <a href="./myorder.html">📦 My Orders</a>
-        <a href="./returns.html">↩️ Returns & Cancel</a>
-        <a href="./reviews.html">⭐ My Rating & Reviews</a>
-        <a href="./wishlist.html">💖 My Wishlist</a>
-        <a href="./payment.html">💳 Payment</a>
-        <!-- <a href="changep.html">🔒 Change Password</a> -->
-      </nav>
-      
-    
+        <a href="./profil.html" class="active">🧑 Malumotlarim</a>
+        <a href="./myorder.html">📦 Buyurtmalarim</a>
+        <a href="./returns.html">↩️ Qaytarilgan & Bekor qilingan</a>
+        <a href="./reviews.html">⭐ Sharhlarim</a>
+        <a href="./wishlist.html">💖 Saralangan</a>
         <a href="../index.html">
-              <i class="fa fa-sign-in-alt me-2"></i>
-          <span>Logout</span>
-          </a>
+          <i class="fa fa-sign-in-alt me-2"></i>
+      <span>Chiqish</span>
+      </a>
+      </nav>
       
       
     </aside>
@@ -64,40 +61,40 @@
     <!-- Main Content -->
     <main class="profile-section">
       <div class="profile-header">
-        <h2>Personal Information</h2>
+        <h2>Shaxsiy ma'lumotlar</h2>
       </div>
       <div class="profile-body">
         <div class="profile-photo">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvYeB0EM3qeVoO_ZFHDqz7Q1UsRMPtLWpuHg&s" alt="User Photo">
         </div>
         <form id="profileForm">
-          <label for="name">Name</label>
+          <label for="name">Ism, familiya</label>
           <input type="text" id="name" value="Kazi Mahbub" disabled>
 
-          <label for="dob">Date Of Birth</label>
+          <label for="dob">Tug'ilgan kun</label>
           <input type="date" id="dob" value="2022-01-20" disabled>
 
-          <label>Gender</label>
+          <label>Jins</label>
           <div class="gender">
-            <label><input type="radio" name="gender" checked disabled> Male</label>
-            <label><input type="radio" name="gender" disabled> Female</label>
+            <label><input type="radio" name="gender" checked disabled> Erkak</label>
+            <label><input type="radio" name="gender" disabled> Ayol</label>
           </div>
 
-          <label for="phone">Phone Number</label>
+          <label for="phone">Telefon raqam</label>
           <div class="phone-input">
             <span>🇹🇷</span>
             <input type="text" id="phone" value="+90-123456789" disabled>
           </div>
 
-          <label for="email">Email</label>
+          <label for="email">Elektron pochta</label>
           <input type="email" id="email" value="abcd1234@email.com" disabled>
         </form>
       </div>
       
       <div class="buttons">
-        <button type="button" id="editBtn">Edit</button>
-        <button type="submit" id="saveBtn" disabled>Save</button>
-        <button type="button" id="cancelBtn" disabled>Cancel</button>
+        <button type="button" id="editBtn">Yangilash</button>
+        <button type="submit" id="saveBtn" disabled>Saqlash</button>
+        <button type="button" id="cancelBtn" disabled>Bekor qilish</button>
       </div>
     </main>
   </div>

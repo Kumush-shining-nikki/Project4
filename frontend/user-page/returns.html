@@ -11,17 +11,16 @@
  
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="/admin-panel/server.css" />
   <link rel="stylesheet" href="profil.css" />
   <link rel="stylesheet" href="returns.css"/>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<link rel="stylesheet" href="/admin-panel/orders.css">
+<link rel="stylesheet" href="../admin-panel/orders.css">
 </head>
 <body>
-    <header >
+    <header>
         <div class="announcement-bar">
           <button class="prev">&#10094;</button>
           <p>OZBE HUSH KELIBSIZ!</p>
@@ -29,11 +28,11 @@
         </div>
         
         <nav class="navbar">
-          <a href="../index.html" class="logo"><img src="../images/logo.png" class="logo" alt="" /></a>
-          <ul class="nav-links">
-            <li><a href="../index.html">Главное</a></li>
-            <li><a href="../shop.html">Магазин</a></li>
-            <li><a href="../contact.html">Контакты</a></li>
+          <ul class="nav-links nav nav-underline">
+            <a href="../index.html" class="logo"><img src="../images/logo.png" class="logo" alt="" /></a>
+            <li class="nav-item"><a class="nav-link active" href="../index.html">Asosiy</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../shop.html">Do'kon</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../contact.html">Aloqa</a></li>
           </ul>
           <div class="icons">
             <a href="../search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -42,29 +41,40 @@
           </div>
         </nav>
       </header>
-
-      <div class="wrapper">
+        
+        <div class="wrapper">
         <!-- Sidebar -->
         <aside class="sidebar">
           <nav class="menu">
-            <a href="./profil.html" class="active">🧑 My Accounts</a>
-            <a href="./myorder.html">📦 My Orders</a>
-            <a href="./returns.html">↩️ Returns & Cancel</a>
-            <a href="./reviews.html">⭐ My Rating & Reviews</a>
-            <a href="./wishlist.html">💖 My Wishlist</a>
-            <a href="./payment.html">💳 Payment</a>
-            <!-- <a href="changep.html">🔒 Change Password</a> -->
+            <a href="./profil.html" class="active">🧑 Malumotlarim</a>
+            <a href="./myorder.html">📦 Buyurtmalarim</a>
+            <a href="./returns.html">↩️ Qaytarilgan & Bekor qilingan</a>
+            <a href="./reviews.html">⭐ Sharhlarim</a>
+            <a href="./wishlist.html">💖 Saralangan</a>
+            <a href="../index.html" style="display: block; padding: 0.75rem; color: #111; text-decoration: none; border-radius: 0.375rem; margin-bottom: 0.5rem;">
+                  <i class="fa fa-sign-in-alt me-2"></i>
+              <span>Chiqish</span>
+            </a>
+          
           </nav>
           
-        <a href="../index.html">
-            <i class="fa fa-sign-in-alt me-2"></i>
-        <span>Logout</span>
-        </a>
-            
-    </aside>
+        
+          
+        </aside>
 
-    <div class="container">
-        <h1>Products</h1>
+        <div class="container">
+        <h1>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group" bis_skin_checked="1" style=" gap: 20px;">
+              <a href="myorder.html" style="text-decoration: none;">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked="">
+                <label class="btn btn-outline-primary" for="btnradio1" style="font-size: 1rem">Qaytarilgan</label>
+              </a>
+              <a href="myorder.html" style="text-decoration: none;">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio2" style="font-size: 1rem">Bekor qilingan</label>
+              </a>
+              </div>
+          </h1>
          
         <div class="search-bar">
             <div class="search-input">
@@ -77,21 +87,20 @@
                   <table>
                     <thead>
                         <tr>
-                            <th style="width: 60px; accent-color: #5e72e4; cursor: pointer"><input type="checkbox" id="selectAll"></th>
-                            <th>No</th>
-                            <th>Client</th>
-                            <th>Location</th>
+                            <th>Kodi</th>
+                            <th>Nomi</th>
+                            <th>Joylashuv</th>
                             <th>Status</th>
-                            <th>Date</th>
-                            <th>Price</th>
-                            <th>ACTION</th>
+                            <th>Buyurtma berilgan sana</th>
+                            <th>Olib ketish sanasi</th>
+                            <th>Narxi</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                       <tr>
                           <div class="item">
-                          <td><input type="checkbox" class="checkbox"></td> 
-                          <td><div class="product-number">52</div></td>
+                        <td>21352363</td>
                           <td>
                               <div class="author-info">
                                   <div>
@@ -101,8 +110,9 @@
                           </td>
                           <td><div class="location">Xiva</div></td>
                           <td><span class="status status-online">cancel</span></td>
-                          <td><input type="text" class="last-login" value="23/04/18" disabled></td>
-                          <td><input type="text" class="price" value="250000" disabled></td>
+                          <td>23/04/18</td>
+                          <td>25/04/18</td>
+                          <td>250000</td>
                           <td>
                               <div class="action-buttons">
                                   <button class="btn btn-edit" onclick="editUser(this)"><i class="fas fa-edit"></i></button>
@@ -113,8 +123,7 @@
                       </tr>
                       <tr>
                         <div class="item">
-                        <td><input type="checkbox" class="checkbox"></td> 
-                        <td><div class="product-number">53</div></td>
+                            <td>21352363</td>
                         <td>
                             <div class="author-info">
                                 <div>
@@ -124,8 +133,9 @@
                         </td>
                         <td><div class="location">Samarqand</div></td>
                         <td><span class="status status-optime">cancel</span></td>
-                        <td><input type="text" class="last-login" value="23/04/18" disabled></td>
-                        <td><input type="text" class="price" value="200000" disabled></td>
+                        <td>23/04/18</td>
+                          <td>25/04/18</td>
+                        <td>200000</td>
                         <td>
                             <div class="action-buttons">
                                 <button class="btn btn-edit" onclick="editUser(this)"><i class="fas fa-edit"></i></button>
@@ -136,8 +146,7 @@
                     </tr>
                     <tr>
                         <div class="item">
-                        <td><input type="checkbox" class="checkbox"></td> 
-                        <td><div class="product-number">54</div></td>
+                            <td>21352363</td>
                         <td>
                             <div class="author-info">
                                 <div>
@@ -147,8 +156,9 @@
                         </td>
                         <td><div class="location">Navoiy</div></td>
                         <td><span class="status status-optime">cancel</span></td>
-                        <td><input type="text" class="last-login" value="23/04/18" disabled></td>
-                        <td><input type="text" class="price" value="99000" disabled></td>
+                        <td>23/04/18</td>
+                          <td>25/04/18</td>
+                        <td>99000</td>
                         <td>
                             <div class="action-buttons">
                                 <button class="btn btn-edit" onclick="editUser(this)"><i class="fas fa-edit"></i></button>
@@ -159,8 +169,7 @@
                     </tr>
                     <tr>
                         <div class="item">
-                        <td><input type="checkbox" class="checkbox"></td> 
-                        <td><div class="product-number">55</div></td>
+                            <td>21352363</td>
                         <td>
                             <div class="author-info">
                                 <div>
@@ -170,8 +179,9 @@
                         </td>
                         <td><div class="location">Navoiy</div></td>
                         <td><span class="status status-optime">cancel</span></td>
-                        <td><input type="text" class="last-login" value="23/04/18" disabled></td>
-                        <td><input type="text" class="price" value="455000" disabled></td>
+                        <td>23/04/18</td>
+                        <td>25/04/18</td>
+                        <td>455000</td>
                         <td>
                             <div class="action-buttons">
                                 <button class="btn btn-edit" onclick="editUser(this)"><i class="fas fa-edit"></i></button>
@@ -182,8 +192,7 @@
                     </tr>
                     <tr>
                         <div class="item">
-                        <td><input type="checkbox" class="checkbox"></td> 
-                        <td><div class="product-number">56</div></td>
+                            <td>21352363</td>
                         <td>
                             <div class="author-info">
                                 <div>
@@ -193,8 +202,9 @@
                         </td>
                         <td><div class="location">Navoiy</div></td>
                         <td><span class="status status-online">cancel</span></td>
-                        <td><input type="text" class="last-login" value="23/04/18" disabled></td>
-                        <td><input type="text" class="price" value="500000" disabled></td>
+                        <td>23/04/18</td>
+                        <td>25/04/18</td>
+                        <td>500000</td>
                         <td>
                             <div class="action-buttons">
                                 <button class="btn btn-edit" onclick="editUser(this)"><i class="fas fa-edit"></i></button>
@@ -205,8 +215,7 @@
                     </tr>
                     <tr>
                         <div class="item">
-                        <td><input type="checkbox" class="checkbox"></td> 
-                        <td><div class="product-number">57</div></td>
+                            <td>21352363</td>
                         <td>
                             <div class="author-info">
                                 <div>
@@ -216,8 +225,9 @@
                         </td>
                         <td><div class="location">Navoiy</div></td>
                         <td><span class="status status-optime">cancel</span></td>
-                        <td><input type="text" class="last-login" value="23/04/18" disabled></td>
-                        <td><input type="text" class="price" value="150000" disabled></td>
+                        <td>23/04/18</td>
+                        <td>25/04/18</td>
+                        <td>150000</td>
                         <td>
                             <div class="action-buttons">
                                 <button class="btn btn-edit" onclick="editR(this)"><i class="fas fa-edit"></i></button>
@@ -240,6 +250,8 @@
     <script src="./profil.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../script.js"></script>
     <script src="./returns.js"></script>
 </body>
