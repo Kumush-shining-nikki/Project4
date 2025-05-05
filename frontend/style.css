@@ -407,19 +407,22 @@ h6 {
 .fresh .swiper-wrapper .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  /* background: #fff; */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  margin: 0;
 }
 
-.swiper-slide img {
+.fresh .swiper-slide img {
   display: block;
-  width: 100%;
+  width: 90%;
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+  border-top-right-radius: 50%; 
+  border-top-left-radius: 50%;
 }
 
 .actions {
