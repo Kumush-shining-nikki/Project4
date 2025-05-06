@@ -85,6 +85,28 @@
           </ul>
         </nav>
       </header>
+      <style>
+        .create-admin-btn {
+      background-color: #4CAF50; /* Yashil rang */
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .create-admin-btn:hover {
+      background-color: #45a049;
+    }
+    
+    .create-admin-btn:active {
+      transform: scale(0.98);
+    }
+    
+      </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -201,6 +223,10 @@
                       <div class="search-input">
                           <i class="fas fa-search"></i>
                           <input type="text" placeholder="Qidiruv...">
+                      </div>
+                      <div style="padding-right: 10%; width: 30%;">
+                        <button class="create-admin-btn" onclick="openCreateModal()">Yangi user qo‘shish</button>
+            
                       </div>
                   </div>
                   
@@ -405,7 +431,7 @@
 <!--  Modal -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
-    <h2>Admin ma'lumotlarini yangilash</h2>
+    <h2>User ma'lumotlarini yangilash</h2>
     <label>Ism:</label>
     <input type="text" id="inputName" />
 
@@ -427,6 +453,35 @@
     </div>
   </div>
 </div>
+
+
+<!-- Create Modal -->
+<div class="modal-overlay" id="createModalOverlay">
+  <div class="modal">
+    <h2>Yangi foydalanuvchi qo‘shish</h2>
+
+    <label>Ism:</label>
+    <input type="text" id="createName" />
+
+    <label>Email:</label>
+    <input type="email" id="createEmail" />
+
+    <label>Telefon:</label>
+    <input type="text" id="createPhone" />
+
+    <label>Orders:</label>
+      <input type="number" id="createOrders" min="1">
+
+    <label>Oxirgi kirish:</label>
+    <input type="text" id="createLogin" />
+
+    <div class="modal-buttons">
+      <button class="save-btn" id="createSaveBtn">Saqlash</button>
+      <button class="close-btn" id="createCloseBtn">Bekor qilish</button>
+    </div>
+  </div>
+</div>
+
 
   <script src="users.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

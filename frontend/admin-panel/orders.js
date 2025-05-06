@@ -42,6 +42,60 @@ window.onclick = (e) => {
 };
 
 
+// Create
+const createModalOverlay2 = document.getElementById("createModalOverlay2");
+const createCloseBtn = document.getElementById("createCloseBtn");
+const createSaveBtn = document.getElementById("createSaveBtn");
+
+const createClient = document.getElementById("createClient");
+const createLocation = document.getElementById("createLocation");
+const createStatus = document.getElementById("createStatus");
+const createPrice = document.getElementById("createPrice");
+const createDate = document.getElementById("createDate");
+
+// Open Create Modal
+function openCreateModal() {
+  // Optional: clear old values
+  createClient.value = "";
+  createLocation.value = "";
+  createStatus.value = "";
+  createPrice.value = "admin";
+  createDate.value = "";
+
+  createModalOverlay2.style.display = "block";
+}
+
+// Close Create Modal
+createCloseBtn.onclick = () => {
+  createModalOverlay2.style.display = "none";
+};
+
+// Save new admin
+createSaveBtn.onclick = () => {
+  const newProduct = {
+    client: createClient.value.trim(),
+    location: createLocation.value.trim(),
+    status: createStatus.value.trim(),
+    price: createPrice.value,
+    date: createDate.value.trim(),
+  };
+
+  console.log("Yangi product:", newProduct);
+  alert("Yangi product qo‘shildi (yoki serverga jo‘natiladi)");
+  createModalOverlay2.style.display = "none";
+};
+
+// Outside click to close
+window.onclick = (e) => {
+  if (e.target == createModalOverlay2) {
+    createModalOverlay2.style.display = "none";
+  }
+};
+
+
+
+
+
 
 // 
 
