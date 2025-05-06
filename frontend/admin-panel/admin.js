@@ -94,9 +94,64 @@ selectAll.addEventListener('change', function () {
     modalOverlay.style.display = "none";
   };
 
-  // Optional: Close modal on outside click
-  window.onclick = (e) => {
-    if (e.target == modalOverlay) {
-      modalOverlay.style.display = "none";
-    }
+  // Outside click to close
+window.onclick = (e) => {
+  if (e.target == modalOverlay) {
+    modalOverlay.style.display = "none";
+  }
+};
+
+
+
+
+// Create
+const createModalOverlay = document.getElementById("createModalOverlay");
+const createCloseBtn = document.getElementById("createCloseBtn");
+const createSaveBtn = document.getElementById("createSaveBtn");
+
+const createName = document.getElementById("createName");
+const createEmail = document.getElementById("createEmail");
+const createPhone = document.getElementById("createPhone");
+const createRole = document.getElementById("createRole");
+const createLogin = document.getElementById("createLogin");
+
+// Open Create Modal
+function openCreateModal() {
+  // Optional: clear old values
+  createName.value = "";
+  createEmail.value = "";
+  createPhone.value = "";
+  createRole.value = "admin";
+  createLogin.value = "";
+
+  createModalOverlay.style.display = "block";
+}
+
+// Close Create Modal
+createCloseBtn.onclick = () => {
+  createModalOverlay.style.display = "none";
+};
+
+// Save new admin
+createSaveBtn.onclick = () => {
+  const newAdmin = {
+    name: createName.value.trim(),
+    email: createEmail.value.trim(),
+    phone: createPhone.value.trim(),
+    role: createRole.value,
+    lastLogin: createLogin.value.trim(),
   };
+
+  console.log("Yangi admin:", newAdmin);
+  alert("Yangi admin qo‘shildi (yoki serverga jo‘natiladi)");
+  createModalOverlay.style.display = "none";
+};
+
+// Outside click to close
+window.onclick = (e) => {
+  if (e.target == createModalOverlay) {
+    createModalOverlay.style.display = "none";
+  }
+};
+
+

@@ -88,7 +88,28 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <link rel="stylesheet" href="orders.css">
 
+<style>
+  .create-admin-btn {
+background-color: #4CAF50; /* Yashil rang */
+color: white;
+padding: 10px 20px;
+font-size: 16px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
+.create-admin-btn:hover {
+background-color: #45a049;
+}
+
+.create-admin-btn:active {
+transform: scale(0.98);
+}
+
+</style>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -204,6 +225,9 @@
             <div class="search-input">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Qidiruv...">
+            </div>
+            <div style="padding-right: 10%; width: 30%;">
+              <button class="create-admin-btn" onclick="openCreateModal()">Yangi product qo‘shish</button>
             </div>
         </div>
 
@@ -396,6 +420,35 @@
     </div>
   </div>
 </div>
+
+
+<!-- Create Modal -->
+<div class="modal-overlay" id="createModalOverlay2" style="display: none;">
+  <div class="modal">
+    <h2>Yangi Product qo'shish</h2>
+
+    <label for="inputClient">Client:</label>
+    <input type="text" id="createClient" />
+
+    <label for="inputLocation">Location:</label>
+    <input type="text" id="createLocation" />
+
+    <label for="inputStatus">Status:</label>
+    <input type="text" id="createStatus" />
+
+    <label for="inputPrice">Price:</label>
+    <input type="number" id="createPrice" min="1" />
+
+    <label for="inputDate">Date:</label>
+    <input type="date" id="createDate" />
+
+    <div class="modal-buttons">
+      <button class="save-btn" id="createSaveBtn">Saqlash</button>
+      <button class="close-btn" id="createCloseBtn">Bekor qilish</button>
+    </div>
+  </div>
+</div>
+
 
     
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

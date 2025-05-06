@@ -102,3 +102,53 @@
       }
     };
   
+    
+
+// Create
+const createModalOverlay = document.getElementById("createModalOverlay");
+const createCloseBtn = document.getElementById("createCloseBtn");
+const createSaveBtn = document.getElementById("createSaveBtn");
+
+const createName = document.getElementById("createName");
+const createEmail = document.getElementById("createEmail");
+const createPhone = document.getElementById("createPhone");
+const createOrders = document.getElementById("createOrders");
+const createLogin = document.getElementById("createLogin");
+
+// Create modalni ochish funksiyasi
+function openCreateModal() {
+  createName.value = "";
+  createEmail.value = "";
+  createPhone.value = "";
+  createOrders.value = "admin"; // yoki default qiymat
+  createLogin.value = "";
+
+  createModalOverlay.style.display = "block";
+}
+
+// Create modalni yopish
+createCloseBtn.onclick = () => {
+  createModalOverlay.style.display = "none";
+};
+
+// Create ma'lumotlarini saqlash
+createSaveBtn.onclick = () => {
+  const newUser = {
+    name: createName.value.trim(),
+    email: createEmail.value.trim(),
+    phone: createPhone.value.trim(),
+    role: createOrders.value,
+    lastLogin: createLogin.value.trim(),
+  };
+
+  console.log("Yangi foydalanuvchi:", newUser);
+  alert("Yangi foydalanuvchi qo‘shildi (yoki serverga jo‘natiladi)");
+  createModalOverlay.style.display = "none";
+};
+
+// Tashqariga bosilganda yopish
+window.onclick = (e) => {
+  if (e.target == createModalOverlay) {
+    createModalOverlay.style.display = "none";
+  }
+};

@@ -15,11 +15,10 @@
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../admin-panel/server.css" />
   <link rel="stylesheet" href="./profil.css" />
-  <!-- <link rel="stylesheet" href="./payment.css" /> -->
 </head>
 <body>
 
-  <header >
+  <header class="header">
     <div class="announcement-bar">
       <button class="prev">&#10094;</button>
       <p>OZBE HUSH KELIBSIZ!</p>
@@ -59,106 +58,78 @@
       
     </aside>
 
-    <!-- Main Content -->
-    <main class="profile-section">
-      <div class="profile-header">
-        <h2>Shaxsiy ma'lumotlar</h2>
-      </div>
-      <div class="profile-body">
-        <div class="profile-photo">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvYeB0EM3qeVoO_ZFHDqz7Q1UsRMPtLWpuHg&s" alt="User Photo">
+    <div class="row payment">
+
+      <!-- Profil -->
+      <div class="column">
+        <h2>Foydalanuvchi Profili</h2>
+        <div class="form-group">
+          <label>Ism, familiya</label>
+          <input type="text" id="name" value="Kazi Mahbub" readonly>
         </div>
-        <form id="profileForm">
-          <label for="name">Ism, familiya</label>
-          <input type="text" id="name" value="Kazi Mahbub" disabled>
-
-          <label for="dob">Tug'ilgan kun</label>
-          <input type="date" id="dob" value="2022-01-20" disabled>
-
+  
+        <div class="form-group">
+          <label>Tug'ilgan kun</label>
+          <input type="text" id="birthdate" value="20.01.2022" readonly>
+        </div>
+  
+        <div class="form-group">
           <label>Jins</label>
-          <div class="gender">
-            <label><input type="radio" name="gender" checked disabled style="width: 10px;"> Erkak</label>
-            <label><input type="radio" name="gender" disabled style="width: 10px;"> Ayol</label>
+          <div class="gender-group">
+            <label><input type="radio" name="gender" value="Erkak" checked disabled> Erkak</label>
+            <label><input type="radio" name="gender" value="Ayol" disabled> Ayol</label>
           </div>
-
-          <label for="phone">Telefon raqam</label>
-          <div class="phone-input">
-            <input type="text" id="phone" value="+90-123456789" disabled>
-          </div>
-
-          <label for="email">Elektron pochta</label>
-          <input type="email" id="email" value="abcd1234@email.com" disabled>
-        </form>
-      </div>
-      
-      <div class="buttons">
-        <button type="button" id="editBtn">Yangilash</button>
-        <button type="submit" id="saveBtn" disabled>Saqlash</button>
-        <button type="button" id="cancelBtn" disabled>Bekor qilish</button>
-      </div>
-
-
-
-
-      <div class="payment">
-        <div id="card-success" class="hidden">
-          <i class="fa fa-check"></i>
-          <p>Payment Successful!</p>
         </div>
-        <div id="form-errors" class="hidden">
-          <i class="fa fa-exclamation-triangle"></i>
-          <p id="card-error">Card error</p>
+  
+        <div class="form-group">
+          <label>Telefon raqam</label>
+          <input type="tel" id="phone" value="+90-123456789" readonly>
         </div>
-        <div id="form-container">
-        
-          <div id="card-front">
-            <div id="shadow"></div>
-            <div id="image-container">
-              <span id="amount">paying: <strong>$99</strong></span>
-              <span id="card-image">
-              
-                </span>
-            </div>
-        
-            <label for="card-number">
-                Card Number
-              </label>
-            <input type="text" id="card-number" placeholder="1234 5678 9101 1112" length="16">
-            <div id="cardholder-container">
-              <label for="card-holder">Card Holder
-              </label>
-              <input type="text" id="card-holder" placeholder="e.g. John Doe" />
-            </div>
-           
-            <div id="exp-container">
-              <label for="card-exp">
-                  Expiration
-                </label>
-              <input id="card-month" type="text" placeholder="MM" length="2">
-              <input id="card-year" type="text" placeholder="YY" length="2">
-            </div>
-                <div id="cvc-container">
-              <label for="card-cvc"> CVC/CVV</label>
-              <input id="card-cvc" placeholder="XXX-X" type="text" min-length="3" max-length="4">
-              <p>Last 3 or 4 digits</p>
-            </div>
-          </div>
-          <div id="card-back">
-            <div id="card-stripe">
-            </div>
-        
-          </div>
-          <input type="text" id="card-token" />
-          <button type="button" id="card-btn">Submit</button>
-        
+  
+        <div class="form-group">
+          <label>Elektron pochta</label>
+          <input type="email" id="email" value="abcd1234@email.com" readonly>
+        </div>
+  
+        <div class="btn-group">
+          <button class="btn btn-primary" id="editBtn">Yangilash</button>
+          <button class="btn btn-success" id="saveBtn" disabled>Saqlash</button>
+          <button class="btn btn-danger" id="cancelBtn" disabled>Bekor qilish</button>
         </div>
       </div>
-
-      
-      
-
-
-    </main>
+  
+      <!-- To‘lov -->
+      <div class="column">
+        <h2>To‘lov - $99</h2>
+        <div class="credit-card">
+          <div class="form-group">
+            <label>Karta raqami</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9101 1121">
+          </div>
+  
+          <div class="form-group">
+            <label>Karta egasi</label>
+            <input type="text" id="cardHolder" placeholder="e.g. John Doe">
+          </div>
+  
+          <div class="card-row">
+            <div class="form-group" style="flex: 1;">
+              <label>Muddati</label>
+              <input type="text" id="expiry" placeholder="MM/YY">
+            </div>
+            <div class="form-group" style="flex: 1;">
+              <label>CVC/CVV</label>
+              <input type="text" id="cvv" placeholder="123">
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <button class="btn submit-button" id="payBtn">To‘lovni yuborish</button>
+          </div>
+        </div>
+      </div>
+  
+    </div>
   </div>
 
   
