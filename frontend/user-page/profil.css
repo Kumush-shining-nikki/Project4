@@ -134,3 +134,29 @@ input[type="tel"] {
     max-width: 95%;
   }
 }
+
+.profile-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+.profile-image-wrapper img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.profile-image-wrapper img:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+  
