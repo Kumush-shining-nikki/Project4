@@ -1,11 +1,11 @@
-const editBtn = document.getElementById('editBtn');
+const editBtn2 = document.getElementById('editBtn22');
 const saveBtn = document.getElementById('saveBtn');
 const cancelBtn = document.getElementById('cancelBtn');
 const inputs = document.querySelectorAll('input, select');
 
 const originalValues = {};
 
-editBtn?.addEventListener('click', () => {
+editBtn2?.addEventListener('click', () => {
   inputs.forEach(input => {
     originalValues[input.id] = input.value;
     input.disabled = false;

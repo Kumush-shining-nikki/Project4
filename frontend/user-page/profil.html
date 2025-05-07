@@ -62,15 +62,21 @@
 
       <!-- Profil -->
       <div class="column">
-        <h2>Foydalanuvchi Profili</h2>
+        <h2 style="display: flex; justify-content: center; align-items: center;">Foydalanuvchi Profili</h2>
+        <div class="profile-image-wrapper">
+          <label for="profileImageInput">
+            <img id="profileImage" src="https://cdn-icons-png.flaticon.com/512/7915/7915522.png" alt="Profile Image" />
+          </label>
+          <input type="file" id="profileImageInput" accept="image/*" hidden />
+        </div> 
         <div class="form-group">
           <label>Ism, familiya</label>
-          <input type="text" id="name" value="Kazi Mahbub" readonly>
+          <input type="text" id="name" value="Kazi Mahbub" disabled>
         </div>
   
         <div class="form-group">
           <label>Tug'ilgan kun</label>
-          <input type="text" id="birthdate" value="20.01.2022" readonly>
+          <input type="text" id="birthdate" value="20.01.2022" disabled>
         </div>
   
         <div class="form-group">
@@ -83,16 +89,16 @@
   
         <div class="form-group">
           <label>Telefon raqam</label>
-          <input type="tel" id="phone" value="+90-123456789" readonly>
+          <input type="tel" id="phone" value="+90-123456789" disabled>
         </div>
   
         <div class="form-group">
           <label>Elektron pochta</label>
-          <input type="email" id="email" value="abcd1234@email.com" readonly>
+          <input type="email" id="email" value="abcd1234@email.com" disabled>
         </div>
   
         <div class="btn-group">
-          <button class="btn btn-primary" id="editBtn">Yangilash</button>
+          <button class="btn btn-primary" id="editBtn2">Yangilash</button>
           <button class="btn btn-success" id="saveBtn" disabled>Saqlash</button>
           <button class="btn btn-danger" id="cancelBtn" disabled>Bekor qilish</button>
         </div>
@@ -134,6 +140,7 @@
 
   
   <script src="./profil.js"></script>
+  <script src="../admin-panel/profil.js"></script>
   <script src="../script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
