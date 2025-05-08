@@ -13,6 +13,7 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="details.css" />
+  <link rel="stylesheet" href="./search.css">
 </head>
 
 <header>
@@ -30,7 +31,21 @@
         <li><a href="contact.html">Контакты</a></li>
     </ul>
     <div class="icons">
-      <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                 
+<!-- Oddiy Search Icon -->
+ <a id="openSearch" >
+     <i class="fas fa-search"></i>
+ </a>
+
+<!-- Modal -->
+
+<div id="searchModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <input type="text" placeholder="Search here..." class="search-input" />
+    <button class="submit-btn">Search</button>
+  </div>
+</div>
       <a href="login.html"><i class="fa-regular fa-user"></i></a>
       <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i> (<span id="cart-count">0</span>)</a>
     </div>
@@ -270,4 +285,5 @@
       </li>
     </ul>
   </div>
+  <script src="search.js"></script>
 </html>

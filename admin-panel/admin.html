@@ -11,7 +11,7 @@
       <a href="server.html" aria-label="forecastr logo" class="logo">
         <!-- <svg width="140" height="49"> -->
         <img
-          src="/frontend/images/logo2.png"
+          src="/images/logo2.png"
           class="logo"
           alt=""
           width="140"
@@ -47,7 +47,7 @@
             </svg>
             <span>Foydalanuvchilar</span>
           </a>
-        </li>         
+        </li>
         <li>
           <a href="orders.html">
             <svg>
@@ -68,20 +68,24 @@
           </a>
         </li>
         <li>
-          <a href="/frontend/index.html">
-                <i class="fa fa-sign-in-alt me-2"></i>
+          <a href="/index.html">
+            <i class="fa fa-sign-in-alt me-2"></i>
             <span>Chiqish</span>
-            </a>
+          </a>
         </li>
         <li>
           <div class="switch">
-            <input type="checkbox" id="mode" checked>
+            <input type="checkbox" id="mode" checked />
             <label for="mode">
               <span></span>
               <span>Dark</span>
             </label>
           </div>
-          <button class="collapse-btn" aria-expanded="true" aria-label="collapse menu">
+          <button
+            class="collapse-btn"
+            aria-expanded="true"
+            aria-label="collapse menu"
+          >
             <svg aria-hidden="true">
               <use xlink:href="#collapse"></use>
             </svg>
@@ -102,25 +106,24 @@
 
   <style>
     .create-admin-btn {
-  background-color: #4CAF50; /* Yashil rang */
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+      background-color: #4caf50; /* Yashil rang */
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
 
-.create-admin-btn:hover {
-  background-color: #45a049;
-}
+    .create-admin-btn:hover {
+      background-color: #45a049;
+    }
 
-.create-admin-btn:active {
-  transform: scale(0.98);
-}
-
+    .create-admin-btn:active {
+      transform: scale(0.98);
+    }
   </style>
   <body>
     <svg style="display: none">
@@ -289,8 +292,10 @@
             <i class="fas fa-search"></i>
             <input type="text" placeholder="Qidiruv..." />
           </div>
-          <div style="padding-right: 10%; width: 30%;">
-            <button class="create-admin-btn" onclick="openCreateModal()">Yangi admin qo‘shish</button>
+          <div style="padding-right: 10%; width: 30%">
+            <button class="create-admin-btn" onclick="openCreateModal()">
+              Yangi admin qo‘shish
+            </button>
           </div>
         </div>
 
@@ -360,10 +365,7 @@
                   <button class="btn btn-edit" onclick="editUser(this)">
                     <i class="fas fa-edit"></i> Edit
                   </button>
-                  <button
-                    class="btn btn-delete"
-                    onclick="confirmDelete(this)"
-                  >
+                  <button class="btn btn-delete" onclick="confirmDelete(this)">
                     <i class="fas fa-trash"></i>
                   </button>
                 </div>
@@ -390,10 +392,7 @@
                   <button class="btn btn-edit" onclick="editUser(this)">
                     <i class="fas fa-edit"></i> Edit
                   </button>
-                  <button
-                    class="btn btn-delete"
-                    onclick="confirmDelete(this)"
-                  >
+                  <button class="btn btn-delete" onclick="confirmDelete(this)">
                     <i class="fas fa-trash"></i>
                   </button>
                 </div>
@@ -420,10 +419,7 @@
                   <button class="btn btn-edit" onclick="editUser(this)">
                     <i class="fas fa-edit"></i> Edit
                   </button>
-                  <button
-                    class="btn btn-delete"
-                    onclick="confirmDelete(this)"
-                  >
+                  <button class="btn btn-delete" onclick="confirmDelete(this)">
                     <i class="fas fa-trash"></i>
                   </button>
                 </div>
@@ -450,10 +446,7 @@
                   <button class="btn btn-edit" onclick="editUser(this)">
                     <i class="fas fa-edit"></i> Edit
                   </button>
-                  <button
-                    class="btn btn-delete"
-                    onclick="confirmDelete(this)"
-                  >
+                  <button class="btn btn-delete" onclick="confirmDelete(this)">
                     <i class="fas fa-trash"></i>
                   </button>
                 </div>
@@ -480,10 +473,7 @@
                   <button class="btn btn-edit" onclick="editUser(this)">
                     <i class="fas fa-edit"></i> Edit
                   </button>
-                  <button
-                    class="btn btn-delete"
-                    onclick="confirmDelete(this)"
-                  >
+                  <button class="btn btn-delete" onclick="confirmDelete(this)">
                     <i class="fas fa-trash"></i>
                   </button>
                 </div>
@@ -525,37 +515,35 @@
       </div>
     </div>
 
-<!-- Create Modal -->
+    <!-- Create Modal -->
     <div class="modal-overlay" id="createModalOverlay">
       <div class="modal">
         <h2>Yangi admin qo‘shish</h2>
-        
+
         <label>Ism:</label>
         <input type="text" id="createName" />
-    
+
         <label>Email:</label>
         <input type="email" id="createEmail" />
-    
+
         <label>Telefon:</label>
         <input type="text" id="createPhone" />
-    
+
         <label>Rol:</label>
         <select id="createRole">
           <option value="super admin">super admin</option>
           <option value="admin">admin</option>
         </select>
-    
+
         <label>Oxirgi kirish (ixtiyoriy):</label>
         <input type="text" id="createLogin" />
-    
+
         <div class="modal-buttons">
           <button class="save-btn" id="createSaveBtn">Qo‘shish</button>
           <button class="close-btn" id="createCloseBtn">Bekor qilish</button>
         </div>
       </div>
     </div>
-    
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
