@@ -94,4 +94,5 @@ window.onclick = (e) => {
 if (e.target == modalOverlay) {
   modalOverlay.style.display = "none";
 }
+
 };

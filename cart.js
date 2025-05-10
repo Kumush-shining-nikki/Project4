@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   let $addQuantity = $(".btn-quantity.plus"),
       $minusQuantity = $(".btn-quantity.minus"),
@@ -59,9 +58,6 @@ $(document).ready(function () {
 });
 
 
-
-
-
   document.addEventListener("DOMContentLoaded", function () {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartContainer = document.getElementById("cart-items");
@@ -92,3 +88,4 @@ $(document).ready(function () {
 
     document.getElementById("total-price").innerText = "$" + total.toFixed(2);
   });
+

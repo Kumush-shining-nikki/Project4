@@ -1,3 +1,4 @@
+
 const username = document.getElementById('username');
 const password = document.getElementById('pwd');
 const loginBtn = document.querySelector('.submit');
@@ -20,4 +21,5 @@ loginBtn.addEventListener('click', (e) => {
         alert('Invalid username or password!');
     }
 } 
+
 );

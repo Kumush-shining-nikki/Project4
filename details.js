@@ -79,7 +79,7 @@ $(document).ready(function() {
                 }
             });
     });
-  document.getElementById("add-to-cart").addEventListener("click", function (e) {
+  document.getElementById("add-to-cart")?.addEventListener("click", function (e) {
     e.preventDefault();
 
     // Mahsulot ma'lumotlari

@@ -1,3 +1,4 @@
+
 const openBtn = document.getElementById('openSearch');
 const modal = document.getElementById('searchModal');
 const closeBtn = document.getElementById('closeModal');
@@ -10,3 +11,4 @@ window.onclick = (e) => {
     modal.style.display = "none";
   }
 };
+

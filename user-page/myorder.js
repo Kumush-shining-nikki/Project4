@@ -15,3 +15,5 @@
       alert(`${name} is already in wishlist.`);
     }
   }
+
+  

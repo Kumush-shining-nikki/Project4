@@ -1,3 +1,4 @@
+
 let gallerySlider = new Swiper('.gallery-slider', {
   pagination: {
      el: '.swiper-pagination',
@@ -95,4 +96,5 @@ setInterval(() => {
   updateAnnouncement();
 }, 1500);
 });
+
 

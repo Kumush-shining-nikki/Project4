@@ -87,4 +87,5 @@ document.getElementById("payBtn").onclick = () => {
   }
 
   alert("To‘lov muvaffaqiyatli amalga oshirildi!");
+
 };

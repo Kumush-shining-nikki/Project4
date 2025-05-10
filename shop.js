@@ -27,4 +27,5 @@ let swiper = new Swiper(".mySwiper", {
       spaceBetween: 50,
     },
   },
+
 });
