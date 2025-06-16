@@ -55,12 +55,19 @@
     <!-- SLIDER -->
     <div class="slide">
       <div class="swiper mySwiper gallery-slider"><!-- SLIDER uchun -->
-<div class="swiper-wrapper" id="slider-wrapper"></div>
+          <div id="slider-wrapper" class="swiper-wrapper">
+          {{!-- <div class="swiper-slide gallery-slide" id="slider-wrapper"></div> --}}
           <!-- JS orqali rasm joylanadi -->
         </div>
         <div class="swiper-actions" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
           <div class="swiper-btn swiper-button-prev"></div>
-          <div class="swiper-pagination" style="position: static; width: fit-content; display: inline-flex; align-items: center; gap: 8px;"></div>
+          <div class="swiper-pagination" style="position: static;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10"></div>
           <div class="swiper-btn swiper-button-next"></div>
         </div>
       </div>
@@ -79,7 +86,9 @@
     <h2>Yangilaridan</h2>
     <div class="swiper mySwiper fresh">
 <!-- FRESH uchun -->
-<div class="swiper-wrapper" id="fresh-images"></div>
+<div class="swiper-wrapper" id="fresh-images">
+  <div class="swiper-slide" style="border-radius: 20%;"></div>
+</div>
         <!-- JS orqali rasm joylanadi -->
       </div>
       <div class="actions">
@@ -137,7 +146,7 @@
 
   <!-- JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="/user-page/js/script.js"></script>
+  {{!-- <script src="/user-page/js/script.js"></script> --}}
   <script src="/user-page/js/loading.js"></script>
   <script src="/user-page/js/search.js"></script>
   <script src="/user-page/js/index.js"></script>
