@@ -60,10 +60,9 @@ fetch('http://localhost:7000/category')
     categories.forEach(category => {
       if (category.image) {
         const slide = document.createElement('div');
-        slide.className = 'swiper-slide';
         slide.innerHTML = `
           <img src="${category.image}" alt="${category.name}" />
-          <p style="text-align:center; margin-top:8px;">${category.name}</p>
+          <p>${category.name}</p>
         `;
         wrapper.appendChild(slide);
       }
@@ -85,3 +84,51 @@ fetch('http://localhost:7000/category')
   .catch(err => {
     console.error("Xatolik fetch paytida:", err);
   });
+
+
+  // Slider
+   const apiURL = 'http://localhost:7000/products'; // O'zingizning API manzilingiz
+
+  fetch(apiURL)
+    .then(res => res.json())
+    .then(data => {
+      const wrapper = document.getElementById('product-slider');
+
+      data.forEach(product => {
+        if (product.images && product.images.length > 0) {
+          const slide = document.createElement('div');
+          slide.className = 'swiper-slide';
+
+          slide.innerHTML = `
+            <div class="product-card">
+              <img src="${product.images[0]}" alt="${product.name}">
+              <div class="product-info">
+                <h3>${product.name}</h3>
+                <span class="price">${product.price || ''}</span>
+              </div>
+            </div>
+          `;
+
+          wrapper.appendChild(slide);
+        }
+      });
+
+      // Swiper init
+     new Swiper(".mySwiper", {
+  slidesPerView: 5,
+  spaceBetween: 40,
+  loop: true,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+    })
+    .catch(err => {
+      console.error('Xatolik:', err);
+    });
