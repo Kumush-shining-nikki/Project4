@@ -19,3 +19,11 @@ exports.contact = (req, res) => {
 exports.details = (req, res) =>{
     return res.render('details', { layout: false })
 }
+
+exports.wishlist = (req, res) => {
+    return res.render('wishlist', { layout: false })
+}
+
+exports.cart = (req, res) => {
+    return res.render('cart', {layout: false })
+}
