@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <p class="shop-card-price">${parseInt(product.price).toLocaleString('uz-UZ')} so'm</p>
         </div>
         <div class="shop-card-actions">
-         <button class="wishlist-btn" data-product-id="${product._id}" data-action="wishlist">🤍</button>
+         <button class="wishlist-btn" data-product-id="${product._id}" data-action="wishlist"><i class="fa-regular fa-heart"></i></button>
          <button class="btn-cart" data-id="${product._id}" data-action="cart">🛒</button>
         </div>
       `;
@@ -143,7 +143,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       const wishlistBtn = card.querySelector('.wishlist-btn');
       wishlistBtn.addEventListener('click', async () => {
         const productId = wishlistBtn.dataset.productId;
-        const isLiked = wishlistBtn.textContent === '❤️';
+        const icon = wishlistBtn.querySelector('i');
+        const isLiked = wishlistBtn.classList.contains('fa-solid');
         const url = isLiked ? '/wishlists/${id}' : '/wishlist/add';
 
         try {
@@ -156,7 +157,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
           const result = await res.json();
           if (result.success) {
-            wishlistBtn.textContent = isLiked ? '🤍' : '❤️';
+            icon.classList.toggle('fa-regular', isLiked);
+            icon.classList.toggle('fa-solid', !isLiked);
+            icon.style.color = isLiked ? '#555' : '#ff4d6d';
+
+            icon.classList.add('animate')
+            setTimeout(() => icon.classList.remove('animate'), 400);
           } else {
             alert('Amalni bajara olmadik!');
           }
