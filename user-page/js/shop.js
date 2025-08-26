@@ -125,14 +125,18 @@ document.addEventListener('DOMContentLoaded', async () => {
       card.innerHTML = `
         <div class="shop-card-image">
           <img src="${image1}" alt="${product.name}" />
+           <button class="wishlist-btn" data-product-id="${product._id}" data-action="wishlist">
+           <i class="fa-regular fa-heart"></i>
+            </button>
         </div>
         <div class="shop-card-content">
-          <h3 class="shop-card-title">${product.name}</h3>
-          <p class="shop-card-price">${parseInt(product.price).toLocaleString('uz-UZ')} so'm</p>
+        <div class="shop-card-info"> 
+        <div>
+        <h3 class="shop-card-title">${product.name}</h3>
+        <p class="shop-card-price">${parseInt(product.price).toLocaleString('uz-UZ')} so'm</p>
         </div>
-        <div class="shop-card-actions">
-         <button class="wishlist-btn" data-product-id="${product._id}" data-action="wishlist"><i class="fa-regular fa-heart"></i></button>
-         <button class="btn-cart" data-id="${product._id}" data-action="cart">🛒</button>
+        <button class="btn-cart" data-id="${product._id}" data-action="cart"><i class="fa-solid fa-cart-shopping" style="color: white"></i></button>
+        </div>
         </div>
       `;
 
