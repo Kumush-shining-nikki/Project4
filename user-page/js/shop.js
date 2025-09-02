@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       card.addEventListener('mouseenter', () => { imgEl.src = image2 });
       card.addEventListener('mouseleave', () => { imgEl.src = image1 });
 
-      const wishlistBtn = card.querySelector('.wishlist-btn');
+      const wishlistBtn = card.querySelector('.wishlist-btn'); 
       wishlistBtn.addEventListener('click', async () => {
         const productId = wishlistBtn.dataset.productId;
         const icon = wishlistBtn.querySelector('i');

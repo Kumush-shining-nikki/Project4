@@ -282,7 +282,7 @@
 
 
 .btn-cart {
-  background: rgba(28, 40, 75, 0.349);
+  background: rgb(28 40 75);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -293,6 +293,6 @@
 }
 
 .btn-cart:hover {
-  background: rgb(28 40 75);
+  background: rgba(28, 40, 75, 0.925);
   transform: scale(1.05);
 }
