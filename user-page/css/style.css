@@ -487,3 +487,20 @@ h6 {
   color: #fff;
   font-size: 0.8rem;
 }
+
+.swiper-pagination-bullet {
+  width: 16px;          /* kamida 16px */
+  height: 16px;         /* kvadrat qilish */
+  margin: 0 6px;        /* oraliq qo‘shish */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #007aff; /* aktiv holatda rangni ajratish */
+}
+@media (max-width: 768px) {
+  .swiper-pagination-bullet {
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+  }
+}
